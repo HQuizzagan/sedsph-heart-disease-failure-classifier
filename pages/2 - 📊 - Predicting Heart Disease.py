@@ -169,11 +169,10 @@ if num_people == 1:
                     f"Oops! Something went wrong. Please take a screenshot of this page and raise an issue on the Streamlit GitHub page.\n\n{e}"
                 )
                 
-    if prediction:
-        if prediction == 0:
-            st.success("Congratulations! You don't have heart disease.")
-        else:
-            st.error("Oops! You have heart disease.")
+    if prediction == 0:
+        st.success("Congratulations! You don't have heart disease.")
+    else:
+        st.error("Oops! You have heart disease.")
     
 else:
     st.info('Download the following CSV file and fill in the necessary information for the people you want to predict for.')
