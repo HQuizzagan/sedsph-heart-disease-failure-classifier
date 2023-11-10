@@ -169,9 +169,9 @@ if num_people == 1:
                     f"Oops! Something went wrong. Please take a screenshot of this page and raise an issue on the Streamlit GitHub page.\n\n{e}"
                 )
                 
-    if prediction == 0:
+    if prediction is not None and prediction == 0:
         st.success("Congratulations! You don't have heart disease.")
-    else:
+    elif prediction is not None and prediction == 1:
         st.error("Oops! You have heart disease.")
     
 else:
